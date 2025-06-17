@@ -15,7 +15,7 @@ export const countries: Country[] = [
   {
     code: 'UK',
     name: 'United Kingdom',
-    image: 'https://www.pexels.com/photo/historic-university-of-glasgow-courtyard-view-31270313/',
+    image: 'https://www.pexels.com/photo/tower-bridge-726484/',
     description: 'Historic universities and rich cultural heritage',
     studyDescription: 'Oxford, Cambridge, and world-renowned institutions',
     travelDescription: 'Historic castles, vibrant cities, and countryside charm',
