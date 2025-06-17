@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Crown, BarChart3, Users, MessageCircle, AlertTriangle, TrendingUp, Calendar, Target, CheckCircle, XCircle, Clock, Globe, PieChart } from 'lucide-react';
+import { Crown, BarChart3, Users, AlertTriangle, TrendingUp, Calendar, Target, CheckCircle, XCircle, Clock, Globe, PieChart } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { ref, onValue } from 'firebase/database';
 import { database } from '../config/firebase';
