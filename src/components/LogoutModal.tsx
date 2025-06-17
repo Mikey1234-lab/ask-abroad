@@ -24,7 +24,7 @@ const LogoutModal: React.FC<LogoutModalProps> = ({ isOpen, onClose }) => {
           <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
         </div>
 
-        <div className="inline-block align-bottom bg-white/10 backdrop-blur-md rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-white/20">
+        <div className="inline-block align-bottom bg-slate-800/50 backdrop-blur-md rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-slate-700/50">
           <div className="px-6 py-6">
             <div className="flex justify-between items-start">
               <div className="flex">
@@ -36,7 +36,7 @@ const LogoutModal: React.FC<LogoutModalProps> = ({ isOpen, onClose }) => {
                     Confirm Logout
                   </h3>
                   <div className="mt-2">
-                    <p className="text-sm text-blue-200">
+                    <p className="text-sm text-slate-400">
                       Are you sure you want to logout? You will need to sign in again to access your chat rooms and continue conversations.
                     </p>
                   </div>
@@ -44,7 +44,7 @@ const LogoutModal: React.FC<LogoutModalProps> = ({ isOpen, onClose }) => {
               </div>
               <button
                 onClick={onClose}
-                className="rounded-full p-2 text-white/70 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all duration-200"
+                className="rounded-full p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 focus:outline-none focus:ring-2 focus:ring-slate-500/20 transition-all duration-200"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -62,7 +62,7 @@ const LogoutModal: React.FC<LogoutModalProps> = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="mt-3 w-full inline-flex justify-center rounded-xl border border-white/20 shadow-sm px-6 py-3 bg-white/10 text-base font-medium text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition-all duration-200"
+              className="mt-3 w-full inline-flex justify-center rounded-xl border border-slate-600/50 shadow-sm px-6 py-3 bg-slate-700/50 text-base font-medium text-white hover:bg-slate-600/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition-all duration-200"
             >
               <MessageCircle className="h-4 w-4 mr-2" />
               Cancel

@@ -20,7 +20,7 @@ const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose, onAccept, user
 
         <div className="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full border border-gray-200">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 px-6 py-6">
+          <div className="bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 px-6 py-6">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-3">
                 <div className="relative">
@@ -33,7 +33,7 @@ const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose, onAccept, user
                   <h3 className="text-xl font-semibold text-white">
                     Terms and Conditions
                   </h3>
-                  <p className="text-blue-100 text-sm">
+                  <p className="text-emerald-100 text-sm">
                     Please read and accept our terms to continue
                   </p>
                 </div>
@@ -138,13 +138,13 @@ const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose, onAccept, user
               <div className="flex space-x-3">
                 <button
                   onClick={onClose}
-                  className="px-6 py-2 border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
+                  className="px-6 py-2 border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={onAccept}
-                  className="flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
+                  className="flex items-center px-6 py-2 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-xl hover:from-emerald-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200"
                 >
                   <Check className="h-4 w-4 mr-2" />
                   I Accept Terms

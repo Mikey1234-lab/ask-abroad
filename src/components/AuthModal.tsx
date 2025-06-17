@@ -166,7 +166,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
             <div className="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full border border-gray-200">
               {/* Header */}
-              <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 px-6 py-6">
+              <div className="bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 px-6 py-6">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
                     <div className="relative">
@@ -179,7 +179,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                       <h3 className="text-xl font-semibold text-white">
                         Welcome to AskAbroad!
                       </h3>
-                      <p className="text-blue-100 text-sm">
+                      <p className="text-emerald-100 text-sm">
                         Choose how you'd like to continue
                       </p>
                     </div>
@@ -198,10 +198,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   {/* Login/Signup Option */}
                   <button
                     onClick={() => setAuthType('login')}
-                    className="w-full flex items-center justify-between p-6 border-2 border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group"
+                    className="w-full flex items-center justify-between p-6 border-2 border-gray-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-all duration-200 group"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                      <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                         <User className="h-6 w-6 text-white" />
                       </div>
                       <div className="text-left">
@@ -209,7 +209,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                         <p className="text-sm text-gray-600">Create account or sign in for full access</p>
                       </div>
                     </div>
-                    <div className="text-blue-500 group-hover:translate-x-1 transition-transform duration-200">
+                    <div className="text-emerald-500 group-hover:translate-x-1 transition-transform duration-200">
                       →
                     </div>
                   </button>
@@ -217,10 +217,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   {/* Guest Option */}
                   <button
                     onClick={() => setAuthType('guest')}
-                    className="w-full flex items-center justify-between p-6 border-2 border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all duration-200 group"
+                    className="w-full flex items-center justify-between p-6 border-2 border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                         <UserX className="h-6 w-6 text-white" />
                       </div>
                       <div className="text-left">
@@ -228,7 +228,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                         <p className="text-sm text-gray-600">Quick access with 5 message limit</p>
                       </div>
                     </div>
-                    <div className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200">
+                    <div className="text-blue-500 group-hover:translate-x-1 transition-transform duration-200">
                       →
                     </div>
                   </button>
@@ -268,7 +268,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
           <div className="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full border border-gray-200">
             {/* Header */}
-            <div className="bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 px-6 py-6">
+            <div className="bg-gradient-to-r from-blue-600 via-emerald-600 to-blue-600 px-6 py-6">
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <button
@@ -287,7 +287,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     <h3 className="text-xl font-semibold text-white">
                       Guest Access
                     </h3>
-                    <p className="text-orange-100 text-sm">
+                    <p className="text-blue-100 text-sm">
                       Quick start with 5 messages
                     </p>
                   </div>
@@ -314,7 +314,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={formData.guestName}
                     onChange={(e) => setFormData({ ...formData, guestName: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -323,7 +323,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-base font-medium text-white bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
+                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-base font-medium text-white bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
                 >
                   {loading ? (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
@@ -336,8 +336,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
               {/* Info */}
               <div className="mt-6 text-center">
-                <div className="bg-orange-50 rounded-xl p-4">
-                  <p className="text-sm text-orange-700">
+                <div className="bg-blue-50 rounded-xl p-4">
+                  <p className="text-sm text-blue-700">
                     As a guest, you can send up to 5 messages. You can use guest mode multiple times, but each session is limited to 5 messages. Sign up anytime for unlimited access to all features.
                   </p>
                 </div>
@@ -362,7 +362,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
           <div className="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full border border-gray-200">
             {/* Header with gradient */}
-            <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 px-6 py-6">
+            <div className="bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 px-6 py-6">
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <button
@@ -381,7 +381,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     <h3 className="text-xl font-semibold text-white">
                       {isLogin ? 'Welcome Back!' : 'Join AskAbroad'}
                     </h3>
-                    <p className="text-blue-100 text-sm">
+                    <p className="text-emerald-100 text-sm">
                       {isLogin ? 'Continue your journey' : 'Start your global journey'}
                     </p>
                   </div>
@@ -409,7 +409,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                         onClick={() => setUserType('user')}
                         className={`flex flex-col items-center p-4 border-2 rounded-xl transition-all duration-200 ${
                           userType === 'user'
-                            ? 'border-blue-500 bg-blue-50 text-blue-700 shadow-md'
+                            ? 'border-emerald-500 bg-emerald-50 text-emerald-700 shadow-md'
                             : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                         }`}
                       >
@@ -432,7 +432,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                       required
                       value={formData.displayName}
                       onChange={(e) => setFormData({ ...formData, displayName: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -454,7 +454,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                         required
                         value={formData.mobileNumber}
                         onChange={(e) => setFormData({ ...formData, mobileNumber: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
@@ -472,7 +472,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -489,7 +489,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                       required
                       value={formData.password}
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                      className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                       placeholder="Enter your password"
                     />
                     <button
@@ -518,7 +518,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                       required
                       value={formData.confirmPassword}
                       onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                       placeholder="Confirm your password"
                     />
                   </div>
@@ -533,7 +533,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                         type="checkbox"
                         checked={acceptedTerms}
                         onChange={(e) => setAcceptedTerms(e.target.checked)}
-                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                        className="w-4 h-4 text-emerald-600 bg-gray-100 border-gray-300 rounded focus:ring-emerald-500 focus:ring-2"
                         required
                       />
                     </div>
@@ -543,14 +543,14 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                         <button
                           type="button"
                           onClick={() => setShowTermsModal(true)}
-                          className="text-blue-600 hover:text-blue-500 underline focus:outline-none"
+                          className="text-emerald-600 hover:text-emerald-500 underline focus:outline-none"
                         >
                           Terms and Conditions
                         </button>
                         {' '}and{' '}
                         <button
                           type="button"
-                          className="text-blue-600 hover:text-blue-500 underline focus:outline-none"
+                          className="text-emerald-600 hover:text-emerald-500 underline focus:outline-none"
                         >
                           Privacy Policy
                         </button>
@@ -563,7 +563,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 <button
                   type="submit"
                   disabled={loading || (!isLogin && !acceptedTerms)}
-                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-base font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
+                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-base font-medium text-white bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
                 >
                   {loading ? (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
@@ -578,7 +578,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   type="button"
                   onClick={handleGoogleSignIn}
                   disabled={loading}
-                  className="w-full flex justify-center items-center py-4 px-6 border-2 border-gray-200 rounded-xl shadow-sm text-base font-medium text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  className="w-full flex justify-center items-center py-4 px-6 border-2 border-gray-200 rounded-xl shadow-sm text-base font-medium text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                 >
                   <svg className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -596,7 +596,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   {isLogin ? "Don't have an account? " : "Already have an account? "}
                   <button
                     onClick={() => setAuthType(isLogin ? 'signup' : 'login')}
-                    className="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition-colors duration-200"
+                    className="font-medium text-emerald-600 hover:text-emerald-500 focus:outline-none focus:underline transition-colors duration-200"
                   >
                     {isLogin ? 'Sign up' : 'Sign in'}
                   </button>

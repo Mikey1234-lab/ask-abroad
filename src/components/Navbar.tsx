@@ -14,13 +14,13 @@ const Navbar: React.FC = () => {
   const getUserTypeColor = (userType: string) => {
     switch (userType) {
       case 'consultant':
-        return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white';
+        return 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white';
       case 'resident':
-        return 'bg-gradient-to-r from-green-500 to-emerald-500 text-white';
+        return 'bg-gradient-to-r from-blue-500 to-emerald-500 text-white';
       case 'guest':
-        return 'bg-gradient-to-r from-orange-500 to-red-500 text-white';
+        return 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white';
       default:
-        return 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white';
+        return 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white';
     }
   };
 
@@ -52,20 +52,20 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="bg-white/10 backdrop-blur-md shadow-lg border-b border-white/20">
+      <nav className="bg-slate-800/50 backdrop-blur-md shadow-lg border-b border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center space-x-4">
               <div className="relative flex items-center">
-                <MessageCircle className="h-6 w-6 text-blue-400 mr-1" />
-                <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-blue-300 hover:via-purple-300 hover:to-pink-300 transition-all duration-300">
+                <MessageCircle className="h-6 w-6 text-emerald-400 mr-1" />
+                <span className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-blue-400 transition-all duration-300">
                   Ask
                 </span>
-                <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-blue-300 hover:via-purple-300 hover:to-pink-300 transition-all duration-300">
+                <span className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-blue-400 transition-all duration-300">
                   Abroad
                 </span>
-                <Globe className="h-6 w-6 text-green-400 mx-1" />
+                <Globe className="h-6 w-6 text-blue-400 mx-1" />
               </div>
             </div>
 
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
               {currentUser.userType === 'consultant' && (
                 <button
                   onClick={() => navigate('/consultant-dashboard')}
-                  className="group relative inline-flex items-center px-4 py-2 border border-purple-400/20 text-sm font-medium rounded-xl text-purple-200 bg-purple-500/10 hover:bg-purple-500/20 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400/20 transition-all duration-200 hover:scale-105"
+                  className="group relative inline-flex items-center px-4 py-2 border border-emerald-500/20 text-sm font-medium rounded-xl text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500/20 transition-all duration-200 hover:scale-105"
                 >
                   <BarChart3 className="h-4 w-4 mr-2 transform group-hover:scale-110 transition-transform duration-200" />
                   <span className="hidden sm:inline">Dashboard</span>
@@ -89,14 +89,14 @@ const Navbar: React.FC = () => {
                     <div className={`w-10 h-10 rounded-full ${getUserTypeColor(currentUser.userType)} flex items-center justify-center shadow-lg`}>
                       {getUserTypeIcon(currentUser.userType)}
                     </div>
-                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white"></div>
                   </div>
 
                   <div className="hidden sm:block">
                     <div className="text-white font-medium text-lg">
                       {currentUser.displayName}
                     </div>
-                    <div className="text-blue-200 text-sm">
+                    <div className="text-slate-400 text-sm">
                       {getUserTypeDisplayName(currentUser.userType)}
                     </div>
                   </div>
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
               {/* Logout Button */}
               <button
                 onClick={() => setShowLogoutModal(true)}
-                className="group relative inline-flex items-center px-4 py-2 border border-white/20 text-sm font-medium rounded-xl text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/20 transition-all duration-200 hover:scale-105"
+                className="group relative inline-flex items-center px-4 py-2 border border-slate-600/50 text-sm font-medium rounded-xl text-white bg-slate-700/50 hover:bg-slate-600/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500/20 transition-all duration-200 hover:scale-105"
               >
                 <LogOut className="h-4 w-4 mr-2 transform group-hover:translate-x-1 transition-transform duration-200" />
                 <span className="hidden sm:inline">Logout</span>

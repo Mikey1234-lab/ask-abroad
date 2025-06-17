@@ -193,10 +193,10 @@ const ConsultantDashboard: React.FC = () => {
 
   if (!currentUser || currentUser.userType !== 'consultant') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center bg-slate-800/50 backdrop-blur-md rounded-2xl p-8 border border-slate-700/50">
           <h1 className="text-2xl font-bold text-white mb-4">Access Denied</h1>
-          <p className="text-blue-200">This dashboard is only available for Industry Experts.</p>
+          <p className="text-slate-400">This dashboard is only available for Industry Experts.</p>
         </div>
       </div>
     );
@@ -204,11 +204,11 @@ const ConsultantDashboard: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <Navbar />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-400 mx-auto"></div>
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-emerald-400 mx-auto"></div>
             <p className="text-white mt-4">Loading dashboard...</p>
           </div>
         </div>
@@ -217,12 +217,12 @@ const ConsultantDashboard: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse animation-delay-4000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse animation-delay-4000"></div>
       </div>
 
       <Navbar />
@@ -232,8 +232,8 @@ const ConsultantDashboard: React.FC = () => {
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-lg opacity-50 animate-pulse"></div>
-              <div className="relative bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-full">
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full blur-lg opacity-50 animate-pulse"></div>
+              <div className="relative bg-gradient-to-r from-emerald-500 to-blue-500 p-6 rounded-full">
                 <Crown className="h-12 w-12 text-white" />
               </div>
             </div>
@@ -241,8 +241,8 @@ const ConsultantDashboard: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Industry Expert Dashboard
           </h1>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto leading-relaxed">
-            Welcome back, <span className="font-semibold text-purple-200">{currentUser.displayName}</span>! 
+          <p className="text-xl text-emerald-200 max-w-3xl mx-auto leading-relaxed">
+            Welcome back, <span className="font-semibold text-emerald-300">{currentUser.displayName}</span>! 
             Track your impact and performance as an AskAbroad Industry Expert.
           </p>
         </div>
@@ -250,17 +250,17 @@ const ConsultantDashboard: React.FC = () => {
         {/* Today's Stats */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-            <Calendar className="h-8 w-8 mr-3 text-purple-400" />
+            <Calendar className="h-8 w-8 mr-3 text-emerald-400" />
             Today's Performance
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-400/20">
+            <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/20">
               <div className="flex items-center justify-between mb-4">
-                <CheckCircle className="h-8 w-8 text-green-400" />
-                <span className="text-2xl font-bold text-green-400">{stats.questionsAnsweredToday}</span>
+                <CheckCircle className="h-8 w-8 text-emerald-400" />
+                <span className="text-2xl font-bold text-emerald-400">{stats.questionsAnsweredToday}</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Questions Answered</h3>
-              <p className="text-green-200 text-sm">Successfully helped users today</p>
+              <p className="text-emerald-300 text-sm">Successfully helped users today</p>
             </div>
 
             <div className="bg-gradient-to-br from-red-500/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-6 border border-red-400/20">
@@ -269,28 +269,28 @@ const ConsultantDashboard: React.FC = () => {
                 <span className="text-2xl font-bold text-red-400">{stats.questionsNotAnsweredToday}</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Missed Questions</h3>
-              <p className="text-red-200 text-sm">Questions that went unanswered</p>
+              <p className="text-red-300 text-sm">Questions that went unanswered</p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20">
+            <div className="bg-gradient-to-br from-blue-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20">
               <div className="flex items-center justify-between mb-4">
                 <Target className="h-8 w-8 text-blue-400" />
                 <span className="text-2xl font-bold text-blue-400">{stats.conversionsToday}</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Conversions</h3>
-              <p className="text-blue-200 text-sm">Users converted today</p>
+              <p className="text-blue-300 text-sm">Users converted today</p>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/20">
+            <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/20">
               <div className="flex items-center justify-between mb-4">
-                <BarChart3 className="h-8 w-8 text-purple-400" />
-                <span className="text-2xl font-bold text-purple-400">
+                <BarChart3 className="h-8 w-8 text-emerald-400" />
+                <span className="text-2xl font-bold text-emerald-400">
                   {(stats.questionsAnsweredToday + stats.questionsNotAnsweredToday) > 0 ? 
                     Math.round((stats.questionsAnsweredToday / (stats.questionsAnsweredToday + stats.questionsNotAnsweredToday)) * 100) : 0}%
                 </span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Response Rate</h3>
-              <p className="text-purple-200 text-sm">Questions answered vs missed</p>
+              <p className="text-emerald-300 text-sm">Questions answered vs missed</p>
             </div>
           </div>
         </div>
@@ -302,13 +302,13 @@ const ConsultantDashboard: React.FC = () => {
             All-Time Performance
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-400/20">
+            <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/20">
               <div className="flex items-center justify-between mb-4">
-                <CheckCircle className="h-8 w-8 text-green-400" />
-                <span className="text-2xl font-bold text-green-400">{stats.questionsAnsweredTotal}</span>
+                <CheckCircle className="h-8 w-8 text-emerald-400" />
+                <span className="text-2xl font-bold text-emerald-400">{stats.questionsAnsweredTotal}</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Total Questions Answered</h3>
-              <p className="text-green-200 text-sm">Lifetime impact on users</p>
+              <p className="text-emerald-300 text-sm">Lifetime impact on users</p>
             </div>
 
             <div className="bg-gradient-to-br from-red-500/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-6 border border-red-400/20">
@@ -317,25 +317,25 @@ const ConsultantDashboard: React.FC = () => {
                 <span className="text-2xl font-bold text-red-400">{stats.questionsNotAnsweredTotal}</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Total Missed Questions</h3>
-              <p className="text-red-200 text-sm">Opportunities for improvement</p>
+              <p className="text-red-300 text-sm">Opportunities for improvement</p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20">
+            <div className="bg-gradient-to-br from-blue-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20">
               <div className="flex items-center justify-between mb-4">
                 <Target className="h-8 w-8 text-blue-400" />
                 <span className="text-2xl font-bold text-blue-400">{stats.conversionsTotal}</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Total Conversions</h3>
-              <p className="text-blue-200 text-sm">Users successfully converted</p>
+              <p className="text-blue-300 text-sm">Users successfully converted</p>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/20">
+            <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/20">
               <div className="flex items-center justify-between mb-4">
-                <BarChart3 className="h-8 w-8 text-purple-400" />
-                <span className="text-2xl font-bold text-purple-400">{responseRate}%</span>
+                <BarChart3 className="h-8 w-8 text-emerald-400" />
+                <span className="text-2xl font-bold text-emerald-400">{responseRate}%</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Overall Response Rate</h3>
-              <p className="text-purple-200 text-sm">Lifetime performance metric</p>
+              <p className="text-emerald-300 text-sm">Lifetime performance metric</p>
             </div>
           </div>
         </div>
@@ -343,12 +343,12 @@ const ConsultantDashboard: React.FC = () => {
         {/* Analytics Pie Chart */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-            <PieChart className="h-8 w-8 mr-3 text-yellow-400" />
+            <PieChart className="h-8 w-8 mr-3 text-emerald-400" />
             Performance Analytics
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Pie Chart */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8">
+            <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 p-8">
               <h3 className="text-xl font-semibold text-white mb-6 text-center">Question Response Distribution</h3>
               <div className="flex items-center justify-center">
                 <div className="relative w-48 h-48">
@@ -392,7 +392,7 @@ const ConsultantDashboard: React.FC = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-white">{responseRate}%</div>
-                      <div className="text-sm text-blue-200">Response Rate</div>
+                      <div className="text-sm text-slate-400">Response Rate</div>
                     </div>
                   </div>
                 </div>
@@ -400,10 +400,10 @@ const ConsultantDashboard: React.FC = () => {
               <div className="mt-6 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <div className="w-4 h-4 bg-emerald-500 rounded-full"></div>
                     <span className="text-white">Answered</span>
                   </div>
-                  <span className="text-green-400 font-semibold">{stats.questionsAnsweredTotal}</span>
+                  <span className="text-emerald-400 font-semibold">{stats.questionsAnsweredTotal}</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -416,43 +416,43 @@ const ConsultantDashboard: React.FC = () => {
             </div>
 
             {/* Performance Metrics */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8">
+            <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 p-8">
               <h3 className="text-xl font-semibold text-white mb-6">Key Performance Indicators</h3>
               <div className="space-y-6">
-                <div className="bg-white/10 rounded-xl p-4">
+                <div className="bg-slate-700/50 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-blue-200">Total Questions Handled</span>
+                    <span className="text-slate-400">Total Questions Handled</span>
                     <span className="text-2xl font-bold text-white">{totalQuestions}</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div 
-                      className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500"
+                      className="bg-gradient-to-r from-emerald-500 to-blue-500 h-2 rounded-full transition-all duration-500"
                       style={{ width: '100%' }}
                     ></div>
                   </div>
                 </div>
 
-                <div className="bg-white/10 rounded-xl p-4">
+                <div className="bg-slate-700/50 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-green-200">Success Rate</span>
-                    <span className="text-2xl font-bold text-green-400">{responseRate}%</span>
+                    <span className="text-emerald-300">Success Rate</span>
+                    <span className="text-2xl font-bold text-emerald-400">{responseRate}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div 
-                      className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500"
+                      className="bg-gradient-to-r from-emerald-500 to-blue-500 h-2 rounded-full transition-all duration-500"
                       style={{ width: `${responseRate}%` }}
                     ></div>
                   </div>
                 </div>
 
-                <div className="bg-white/10 rounded-xl p-4">
+                <div className="bg-slate-700/50 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-blue-200">Total Conversions</span>
+                    <span className="text-blue-300">Total Conversions</span>
                     <span className="text-2xl font-bold text-blue-400">{stats.conversionsTotal}</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div 
-                      className="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500"
+                      className="bg-gradient-to-r from-blue-500 to-emerald-500 h-2 rounded-full transition-all duration-500"
                       style={{ width: `${Math.min((stats.conversionsTotal / Math.max(totalQuestions, 1)) * 100, 100)}%` }}
                     ></div>
                   </div>
@@ -465,22 +465,22 @@ const ConsultantDashboard: React.FC = () => {
         {/* Country Stats */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-            <Globe className="h-8 w-8 mr-3 text-green-400" />
+            <Globe className="h-8 w-8 mr-3 text-blue-400" />
             Live Country Statistics
           </h2>
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
+          <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden">
             <div className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-96 overflow-y-auto">
                 {countryStats.map((country) => (
-                  <div key={country.code} className="bg-white/10 rounded-xl p-4 border border-white/20">
+                  <div key={country.code} className="bg-slate-700/50 rounded-xl p-4 border border-slate-600/50">
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="text-lg font-semibold text-white">{country.name}</h3>
-                        <p className="text-sm text-blue-200">Online users across all rooms</p>
+                        <p className="text-sm text-slate-400">Online users across all rooms</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-green-400">{country.onlineUsers}</div>
-                        <div className="flex items-center text-green-300 text-sm">
+                        <div className="text-2xl font-bold text-emerald-400">{country.onlineUsers}</div>
+                        <div className="flex items-center text-emerald-400 text-sm">
                           <Users className="h-4 w-4 mr-1" />
                           <span>online</span>
                         </div>
@@ -496,15 +496,15 @@ const ConsultantDashboard: React.FC = () => {
         {/* Conversions Input */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-            <Target className="h-8 w-8 mr-3 text-orange-400" />
+            <Target className="h-8 w-8 mr-3 text-blue-400" />
             Daily Conversions Tracker
           </h2>
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8">
+          <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 p-8">
             <div className="max-w-md mx-auto text-center">
               <h3 className="text-xl font-semibold text-white mb-4">
                 How many users did you convert today?
               </h3>
-              <p className="text-blue-200 mb-6 text-sm">
+              <p className="text-slate-400 mb-6 text-sm">
                 Track users who took action based on your guidance (signed up, applied, etc.)
               </p>
               <div className="flex space-x-4">
@@ -514,12 +514,12 @@ const ConsultantDashboard: React.FC = () => {
                   value={conversionsInput}
                   onChange={(e) => setConversionsInput(e.target.value)}
                   placeholder="Enter number"
-                  className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-200"
+                  className="flex-1 px-4 py-3 bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                 />
                 <button
                   onClick={handleConversionsSubmit}
                   disabled={!conversionsInput.trim()}
-                  className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl hover:from-orange-600 hover:to-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
+                  className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-xl hover:from-emerald-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
                 >
                   <Target className="h-4 w-4" />
                   <span>Add</span>
@@ -530,29 +530,29 @@ const ConsultantDashboard: React.FC = () => {
         </div>
 
         {/* Performance Insights */}
-        <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl border border-purple-300/30 p-8">
+        <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl border border-emerald-400/30 p-8">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-            <AlertTriangle className="h-6 w-6 mr-3 text-yellow-400" />
+            <AlertTriangle className="h-6 w-6 mr-3 text-emerald-400" />
             Performance Insights
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white/10 rounded-xl p-6">
+            <div className="bg-slate-700/50 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-white mb-3">Response Time Guidelines</h3>
-              <p className="text-purple-100 text-sm mb-4">
+              <p className="text-emerald-200 text-sm mb-4">
                 Questions turn yellow after 30 seconds, orange after 1 minute, and get marked as unanswered after 2 minutes.
                 Once marked as unanswered, they remain unanswered even if replied to later.
               </p>
-              <div className="flex items-center space-x-2 text-yellow-300">
+              <div className="flex items-center space-x-2 text-emerald-400">
                 <Clock className="h-4 w-4" />
                 <span className="text-sm">Aim to respond within 2 minutes for best results</span>
               </div>
             </div>
-            <div className="bg-white/10 rounded-xl p-6">
+            <div className="bg-slate-700/50 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-white mb-3">Quality Metrics</h3>
-              <p className="text-purple-100 text-sm mb-4">
+              <p className="text-emerald-200 text-sm mb-4">
                 Focus on answering questions thoroughly within the 2-minute window and converting users to take action on their goals.
               </p>
-              <div className="flex items-center space-x-2 text-green-300">
+              <div className="flex items-center space-x-2 text-emerald-400">
                 <CheckCircle className="h-4 w-4" />
                 <span className="text-sm">Quality and speed for maximum impact</span>
               </div>

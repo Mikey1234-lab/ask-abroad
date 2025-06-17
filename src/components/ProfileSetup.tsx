@@ -49,18 +49,18 @@ const ProfileSetup: React.FC<ProfileSetupProps> = ({ onComplete }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden flex items-center justify-center p-4">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse animation-delay-4000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse animation-delay-4000"></div>
       </div>
 
       <div className="relative z-10 max-w-2xl w-full">
-        <div className="bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
+        <div className="bg-slate-800/50 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-700/50 overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 px-8 py-8">
+          <div className="bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 px-8 py-8">
             <div className="text-center">
               <div className="flex justify-center mb-4">
                 <div className="relative">
@@ -71,7 +71,7 @@ const ProfileSetup: React.FC<ProfileSetupProps> = ({ onComplete }) => {
                 </div>
               </div>
               <h1 className="text-3xl font-bold text-white mb-3">Complete Your Profile</h1>
-              <p className="text-blue-100 text-lg">Help us personalize your AskAbroad chat experience</p>
+              <p className="text-emerald-100 text-lg">Help us personalize your AskAbroad chat experience</p>
             </div>
           </div>
 
@@ -84,7 +84,7 @@ const ProfileSetup: React.FC<ProfileSetupProps> = ({ onComplete }) => {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-blue-300" />
+                  <User className="h-5 w-5 text-emerald-400" />
                 </div>
                 <input
                   type="text"
@@ -92,7 +92,7 @@ const ProfileSetup: React.FC<ProfileSetupProps> = ({ onComplete }) => {
                   required
                   value={formData.displayName}
                   onChange={(e) => setFormData({ ...formData, displayName: e.target.value })}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -110,15 +110,15 @@ const ProfileSetup: React.FC<ProfileSetupProps> = ({ onComplete }) => {
                   rows={5}
                   value={formData.reasonForJoining}
                   onChange={handleReasonChange}
-                  className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200 resize-none"
+                  className="w-full px-4 py-4 bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 resize-none"
                   placeholder="Tell us about your goals, interests, or what you're looking to achieve through AskAbroad. For example: 'I'm planning to study computer science in Canada and need guidance on university applications and student visa requirements.'"
                 />
-                <div className="absolute bottom-2 right-2 text-xs text-blue-300">
+                <div className="absolute bottom-2 right-2 text-xs text-slate-400">
                   {wordCount}/50 words
                 </div>
               </div>
-              <div className="mt-2 bg-white/10 rounded-lg p-3">
-                <p className="text-xs text-blue-200 flex items-center">
+              <div className="mt-2 bg-slate-700/50 rounded-lg p-3">
+                <p className="text-xs text-slate-400 flex items-center">
                   <Sparkles className="h-3 w-3 mr-1" />
                   Share your specific goals and interests in 50 words or less. This helps us connect you with the right experts in our chat rooms.
                 </p>
@@ -129,7 +129,7 @@ const ProfileSetup: React.FC<ProfileSetupProps> = ({ onComplete }) => {
             <button
               type="submit"
               disabled={loading || !formData.displayName.trim() || !formData.reasonForJoining.trim() || wordCount > 50}
-              className="w-full flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white font-medium rounded-xl hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="w-full flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 text-white font-medium rounded-xl hover:from-emerald-700 hover:via-blue-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               {loading ? (
                 <>
@@ -147,8 +147,8 @@ const ProfileSetup: React.FC<ProfileSetupProps> = ({ onComplete }) => {
 
             {/* Info */}
             <div className="text-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                <p className="text-sm text-blue-200">
+              <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-4">
+                <p className="text-sm text-slate-400">
                   Once you complete your profile, you'll have access to all chat rooms and can connect with experts worldwide.
                 </p>
               </div>

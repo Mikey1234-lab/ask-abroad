@@ -54,7 +54,7 @@ const ConsultantLoginModal: React.FC<ConsultantLoginModalProps> = ({ isOpen, onC
 
         <div className="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full border border-gray-200">
           {/* Header with gradient */}
-          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 px-6 py-6">
+          <div className="bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 px-6 py-6">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-3">
                 <div className="relative">
@@ -67,7 +67,7 @@ const ConsultantLoginModal: React.FC<ConsultantLoginModalProps> = ({ isOpen, onC
                   <h3 className="text-xl font-semibold text-white">
                     Admin Login
                   </h3>
-                  <p className="text-purple-100 text-sm">
+                  <p className="text-emerald-100 text-sm">
                     Industry Expert access portal
                   </p>
                 </div>
@@ -84,14 +84,14 @@ const ConsultantLoginModal: React.FC<ConsultantLoginModalProps> = ({ isOpen, onC
           <div className="bg-white px-6 py-6">
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Info Banner */}
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
                 <div className="flex items-center space-x-2">
-                  <Sparkles className="h-4 w-4 text-purple-600" />
-                  <span className="text-sm font-medium text-purple-800">
+                  <Sparkles className="h-4 w-4 text-emerald-600" />
+                  <span className="text-sm font-medium text-emerald-800">
                     Industry Expert Access Only
                   </span>
                 </div>
-                <p className="text-xs text-purple-600 mt-1">
+                <p className="text-xs text-emerald-600 mt-1">
                   Use your provided Industry Expert credentials to access the admin panel
                 </p>
               </div>
@@ -107,7 +107,7 @@ const ConsultantLoginModal: React.FC<ConsultantLoginModalProps> = ({ isOpen, onC
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                   placeholder="Enter your Industry Expert email"
                 />
               </div>
@@ -124,7 +124,7 @@ const ConsultantLoginModal: React.FC<ConsultantLoginModalProps> = ({ isOpen, onC
                     required
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                     placeholder="Enter your password"
                   />
                   <button
@@ -145,7 +145,7 @@ const ConsultantLoginModal: React.FC<ConsultantLoginModalProps> = ({ isOpen, onC
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-base font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
+                className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-base font-medium text-white bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
               >
                 {loading ? (
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>

@@ -365,11 +365,11 @@ const ChatRoom: React.FC = () => {
   const getUserTypeIcon = (userType: string) => {
     switch (userType) {
       case 'consultant':
-        return <Crown className="h-4 w-4 text-purple-400" />;
+        return <Crown className="h-4 w-4 text-emerald-400" />;
       case 'resident':
-        return <Globe className="h-4 w-4 text-green-400" />;
+        return <Globe className="h-4 w-4 text-blue-400" />;
       case 'guest':
-        return <Users className="h-4 w-4 text-orange-400" />;
+        return <Users className="h-4 w-4 text-emerald-400" />;
       default:
         return null;
     }
@@ -378,13 +378,13 @@ const ChatRoom: React.FC = () => {
   const getUserTypeColor = (userType: string) => {
     switch (userType) {
       case 'consultant':
-        return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white';
+        return 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white';
       case 'resident':
-        return 'bg-gradient-to-r from-green-500 to-emerald-500 text-white';
+        return 'bg-gradient-to-r from-blue-500 to-emerald-500 text-white';
       case 'guest':
-        return 'bg-gradient-to-r from-orange-500 to-red-500 text-white';
+        return 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white';
       default:
-        return 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white';
+        return 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white';
     }
   };
 
@@ -435,21 +435,21 @@ const ChatRoom: React.FC = () => {
         title: 'Study Abroad Chat',
         icon: '🎓',
         description: country?.studyDescription || country?.description,
-        gradient: 'from-blue-500 via-blue-600 to-indigo-600'
+        gradient: 'from-emerald-500 via-emerald-600 to-blue-600'
       };
     } else if (category === 'travel') {
       return {
         title: 'Travel Chat',
         icon: '✈️',
         description: country?.travelDescription || country?.description,
-        gradient: 'from-green-500 via-emerald-600 to-teal-600'
+        gradient: 'from-blue-500 via-blue-600 to-emerald-600'
       };
     } else {
       return {
         title: 'Visa Guidance Chat',
         icon: '📋',
         description: country?.visaDescription || 'Expert visa guidance and immigration support',
-        gradient: 'from-purple-500 via-purple-600 to-pink-600'
+        gradient: 'from-emerald-500 via-blue-600 to-emerald-600'
       };
     }
   };
@@ -492,12 +492,12 @@ const ChatRoom: React.FC = () => {
 
   if (!country) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center bg-slate-800/50 backdrop-blur-md rounded-2xl p-8 border border-slate-700/50">
           <h1 className="text-2xl font-bold text-white mb-4">Country not found</h1>
           <button
             onClick={() => navigate('/categories')}
-            className="text-blue-300 hover:text-white transition-colors duration-200"
+            className="text-emerald-400 hover:text-white transition-colors duration-200"
           >
             Back to categories
           </button>
@@ -511,11 +511,11 @@ const ChatRoom: React.FC = () => {
   const remainingMessages = currentUser?.isGuest ? Math.max(0, 5 - guestMessageCount) : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
       </div>
 
       <Navbar />
@@ -523,11 +523,11 @@ const ChatRoom: React.FC = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Industry Expert Info Banner */}
         {isConsultant && (
-          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-300/30 rounded-xl p-4 mb-6">
+          <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-sm border border-emerald-400/30 rounded-xl p-4 mb-6">
             <div className="flex items-center">
-              <Crown className="h-5 w-5 text-purple-300 mr-3" />
-              <p className="text-sm text-purple-100">
-                <span className="font-bold text-purple-200">Industry Expert Mode:</span> You can only send messages by replying to other users' messages. 
+              <Crown className="h-5 w-5 text-emerald-400 mr-3" />
+              <p className="text-sm text-emerald-200">
+                <span className="font-bold text-emerald-300">Industry Expert Mode:</span> You can only send messages by replying to other users' messages. 
                 Select a message and click the reply button to provide your expert guidance.
               </p>
             </div>
@@ -536,14 +536,14 @@ const ChatRoom: React.FC = () => {
 
         {/* Guest Message Limit Warning */}
         {currentUser?.isGuest && remainingMessages !== null && remainingMessages <= 2 && (
-          <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm border border-orange-300/30 rounded-xl p-4 mb-6">
+          <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-sm border border-emerald-400/30 rounded-xl p-4 mb-6">
             <div className="flex items-center">
-              <AlertCircle className="h-5 w-5 text-orange-300 mr-3" />
-              <p className="text-sm text-orange-100">
-                You have <span className="font-bold text-orange-200">{remainingMessages}</span> message{remainingMessages !== 1 ? 's' : ''} remaining as a guest.
+              <AlertCircle className="h-5 w-5 text-emerald-400 mr-3" />
+              <p className="text-sm text-emerald-200">
+                You have <span className="font-bold text-emerald-300">{remainingMessages}</span> message{remainingMessages !== 1 ? 's' : ''} remaining as a guest.
                 <button
                   onClick={() => navigate('/')}
-                  className="ml-2 font-medium text-orange-200 underline hover:no-underline transition-all duration-200"
+                  className="ml-2 font-medium text-emerald-300 underline hover:no-underline transition-all duration-200"
                 >
                   Sign up for unlimited messaging
                 </button>
@@ -553,13 +553,13 @@ const ChatRoom: React.FC = () => {
         )}
 
         {/* Chat Header */}
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 mb-6">
-          <div className="px-6 py-6 border-b border-white/10">
+        <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl shadow-xl border border-slate-700/50 mb-6">
+          <div className="px-6 py-6 border-b border-slate-600/50">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <button
                   onClick={() => navigate(-1)}
-                  className="p-3 rounded-xl hover:bg-white/10 transition-all duration-200 text-white/70 hover:text-white"
+                  className="p-3 rounded-xl hover:bg-slate-700/50 transition-all duration-200 text-slate-400 hover:text-white"
                 >
                   <ArrowLeft className="h-5 w-5" />
                 </button>
@@ -568,16 +568,16 @@ const ChatRoom: React.FC = () => {
                     <h1 className="text-2xl font-semibold text-white flex items-center space-x-3">
                       <span>{country.name}</span>
                       <span className="text-2xl">{categoryInfo.icon}</span>
-                      <span className="text-lg text-blue-200">- {categoryInfo.title}</span>
+                      <span className="text-lg text-slate-400">- {categoryInfo.title}</span>
                     </h1>
-                    <p className="text-sm text-blue-200">{categoryInfo.description}</p>
+                    <p className="text-sm text-slate-400">{categoryInfo.description}</p>
                   </div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3">
-                <div className="flex items-center space-x-2 text-sm text-blue-200 bg-white/10 rounded-full px-4 py-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="flex items-center space-x-2 text-sm text-slate-400 bg-slate-700/50 rounded-full px-4 py-2">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                   <Users className="h-4 w-4" />
                   <span>{onlineUsers.length} online</span>
                 </div>
@@ -586,17 +586,17 @@ const ChatRoom: React.FC = () => {
           </div>
 
           {/* Messages */}
-          <div className="h-96 overflow-y-auto p-6 space-y-4 bg-gradient-to-b from-transparent to-black/10">
+          <div className="h-96 overflow-y-auto p-6 space-y-4 bg-gradient-to-b from-transparent to-slate-900/10">
             {messages.length === 0 ? (
-              <div className="text-center text-blue-200 py-12">
+              <div className="text-center text-slate-400 py-12">
                 <div className="text-6xl mb-6">
                   {categoryInfo.icon}
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-md mx-auto">
+                <div className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 max-w-md mx-auto">
                   <p className="text-xl font-medium mb-3 text-white">
                     Start the conversation!
                   </p>
-                  <p className="text-sm text-blue-200">
+                  <p className="text-sm text-slate-400">
                     {category === 'visa'
                       ? 'Get expert guidance on visa requirements, application processes, and documentation for ' + country.name
                       : category === 'study'
@@ -605,7 +605,7 @@ const ChatRoom: React.FC = () => {
                     }
                   </p>
                   {isConsultant && (
-                    <p className="text-xs text-purple-200 mt-3 italic">
+                    <p className="text-xs text-emerald-300 mt-3 italic">
                       As an Industry Expert, wait for users to post questions and provide your expert guidance by replying to their messages.
                     </p>
                   )}
@@ -624,9 +624,9 @@ const ChatRoom: React.FC = () => {
                     key={message.id}
                     ref={(el) => messageRefs.current[message.id] = el}
                     className={`message-container relative group transition-all duration-500 ${
-                      selectedMessage === message.id ? 'bg-white/5 rounded-xl p-2' : ''
+                      selectedMessage === message.id ? 'bg-slate-700/30 rounded-xl p-2' : ''
                     } ${
-                      isHighlighted ? 'bg-yellow-500/20 rounded-xl p-2 animate-pulse' : ''
+                      isHighlighted ? 'bg-emerald-500/20 rounded-xl p-2 animate-pulse' : ''
                     } ${isOwn ? 'flex justify-end' : 'flex justify-start'}`}
                     onClick={() => handleMessageClick(message)}
                   >
@@ -661,16 +661,16 @@ const ChatRoom: React.FC = () => {
                           {/* Reply indicator */}
                           {message.replyTo && (
                             <div 
-                              className={`bg-white/10 border-l-4 border-blue-400 pl-4 py-2 mb-3 rounded-r-lg backdrop-blur-sm cursor-pointer hover:bg-white/20 transition-all duration-200 ${isOwn ? 'border-r-4 border-l-0 pr-4 pl-0 rounded-l-lg rounded-r-none' : ''}`}
+                              className={`bg-slate-700/50 border-l-4 border-emerald-400 pl-4 py-2 mb-3 rounded-r-lg backdrop-blur-sm cursor-pointer hover:bg-slate-600/50 transition-all duration-200 ${isOwn ? 'border-r-4 border-l-0 pr-4 pl-0 rounded-l-lg rounded-r-none' : ''}`}
                               onClick={(e) => handleReplyClick(message.replyTo!.id, e)}
                             >
                               <div className="flex items-center space-x-1 mb-1">
-                                <Reply className="h-3 w-3 text-blue-400" />
-                                <span className="text-xs font-medium text-blue-300">
+                                <Reply className="h-3 w-3 text-emerald-400" />
+                                <span className="text-xs font-medium text-emerald-400">
                                   Replying to {message.replyTo.senderName}
                                 </span>
                               </div>
-                              <p className="text-xs text-blue-200 italic">
+                              <p className="text-xs text-slate-400 italic">
                                 {message.replyTo.content}
                               </p>
                             </div>
@@ -678,8 +678,8 @@ const ChatRoom: React.FC = () => {
 
                           {/* Message bubble */}
                           <div className={`backdrop-blur-sm rounded-xl p-4 relative border transition-all duration-300 ${statusColor} ${isOwn
-                            ? 'bg-gradient-to-r from-blue-600/80 to-blue-500/80 text-white rounded-br-md border-blue-400/30'
-                            : 'bg-white/10 text-white rounded-bl-md border-white/20'
+                            ? 'bg-gradient-to-r from-emerald-600/80 to-blue-600/80 text-white rounded-br-md border-emerald-500/30'
+                            : 'bg-slate-700/50 text-white rounded-bl-md border-slate-600/50'
                             }`}>
                             {/* Unanswered question indicator */}
                             {showUnansweredIcon && (
@@ -693,7 +693,7 @@ const ChatRoom: React.FC = () => {
                             </p>
 
                             {/* Message timestamp and status */}
-                            <div className={`flex items-center space-x-2 mt-2 text-xs ${isOwn ? 'justify-end text-blue-100' : 'justify-start text-blue-300'}`}>
+                            <div className={`flex items-center space-x-2 mt-2 text-xs ${isOwn ? 'justify-end text-emerald-200' : 'justify-start text-slate-400'}`}>
                               <span>
                                 {new Date(message.timestamp).toLocaleTimeString()}
                               </span>
@@ -703,11 +703,11 @@ const ChatRoom: React.FC = () => {
                               </span>
                               {isQuestionMessage && (
                                 <span className={`text-xs font-medium ${
-                                  message.isUnanswered ? 'text-red-300' :
-                                  message.hasConsultantReply ? 'text-green-300' :
-                                  message.status === 'pending' ? 'text-yellow-300' :
-                                  message.status === 'urgent' ? 'text-orange-300' :
-                                  'text-blue-300'
+                                  message.isUnanswered ? 'text-red-400' :
+                                  message.hasConsultantReply ? 'text-emerald-400' :
+                                  message.status === 'pending' ? 'text-yellow-400' :
+                                  message.status === 'urgent' ? 'text-orange-400' :
+                                  'text-slate-400'
                                 }`}>
                                   {message.isUnanswered ? 'Unanswered' :
                                    message.hasConsultantReply ? 'Answered' :
@@ -728,7 +728,7 @@ const ChatRoom: React.FC = () => {
                                 e.stopPropagation();
                                 handleReply(message);
                               }}
-                              className="p-2 text-blue-300 hover:bg-white/10 rounded-full transition-all duration-200 hover:text-white"
+                              className="p-2 text-emerald-400 hover:bg-slate-700/50 rounded-full transition-all duration-200 hover:text-white"
                               title="Reply to this message"
                             >
                               <Reply className="h-4 w-4" />
@@ -746,27 +746,27 @@ const ChatRoom: React.FC = () => {
 
           {/* Reply Preview */}
           {replyingTo && (
-            <div className="px-6 py-4 bg-blue-500/20 border-t border-blue-400/30 backdrop-blur-sm">
+            <div className="px-6 py-4 bg-emerald-500/20 border-t border-emerald-400/30 backdrop-blur-sm">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <Reply className="h-4 w-4 text-blue-300" />
-                  <span className="text-sm font-medium text-blue-200">
+                  <Reply className="h-4 w-4 text-emerald-400" />
+                  <span className="text-sm font-medium text-emerald-300">
                     Replying to {replyingTo.senderName}
                   </span>
                   {isConsultant && (
-                    <span className="text-xs text-purple-200 bg-purple-500/20 px-2 py-1 rounded-full">
+                    <span className="text-xs text-emerald-300 bg-emerald-500/20 px-2 py-1 rounded-full">
                       Industry Expert Reply
                     </span>
                   )}
                 </div>
                 <button
                   onClick={cancelReply}
-                  className="p-1 text-blue-300 hover:bg-white/10 rounded transition-all duration-200 hover:text-white"
+                  className="p-1 text-emerald-400 hover:bg-slate-700/50 rounded transition-all duration-200 hover:text-white"
                 >
                   <X className="h-4 w-4" />
                 </button>
               </div>
-              <p className="text-sm text-blue-100 mt-2 italic bg-white/10 rounded-lg p-2">
+              <p className="text-sm text-emerald-200 mt-2 italic bg-slate-700/50 rounded-lg p-2">
                 {replyingTo.content.length > 100
                   ? replyingTo.content.substring(0, 100) + '...'
                   : replyingTo.content}
@@ -775,38 +775,38 @@ const ChatRoom: React.FC = () => {
           )}
 
           {/* Message Input */}
-          <div className="px-6 py-4 border-t border-white/10">
+          <div className="px-6 py-4 border-t border-slate-600/50">
             <form onSubmit={sendMessage} className="flex space-x-3">
               <input
                 type="text"
                 value={newMessage}
                 onChange={(e) => setNewMessage(e.target.value)}
                 placeholder={getInputPlaceholder()}
-                className={`flex-1 px-4 py-3 backdrop-blur-sm border rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200 ${
+                className={`flex-1 px-4 py-3 backdrop-blur-sm border rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 ${
                   isInputDisabled() 
-                    ? 'bg-white/5 border-white/10 cursor-not-allowed' 
-                    : 'bg-white/10 border-white/20'
+                    ? 'bg-slate-700/30 border-slate-600/50 cursor-not-allowed' 
+                    : 'bg-slate-700/50 border-slate-600/50'
                 }`}
                 disabled={isInputDisabled()}
               />
               <button
                 type="submit"
                 disabled={isSendDisabled()}
-                className={`px-6 py-3 bg-gradient-to-r ${categoryInfo.gradient} text-white rounded-xl hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2 transform hover:scale-105`}
+                className={`px-6 py-3 bg-gradient-to-r ${categoryInfo.gradient} text-white rounded-xl hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2 transform hover:scale-105`}
               >
                 <Send className="h-4 w-4" />
                 <span>{replyingTo ? 'Reply' : 'Send'}</span>
               </button>
             </form>
             <div className="flex justify-between items-center mt-3">
-              <p className="text-xs text-blue-300 flex items-center">
+              <p className="text-xs text-slate-400 flex items-center">
                 <Sparkles className="h-3 w-3 mr-1" />
                 Messages automatically expire after 48 hours to keep conversations fresh and relevant
                 {replyingTo && ' • Click the X above to cancel reply'}
                 {isConsultant && !replyingTo && ' • Select a message to reply to as an Industry Expert'}
               </p>
               {currentUser?.isGuest && (
-                <p className="text-xs text-orange-300 font-medium">
+                <p className="text-xs text-emerald-400 font-medium">
                   {remainingMessages} message{remainingMessages !== 1 ? 's' : ''} remaining
                 </p>
               )}
@@ -815,14 +815,14 @@ const ChatRoom: React.FC = () => {
         </div>
 
         {/* Online Users Sidebar */}
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-6">
+        <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl shadow-xl border border-slate-700/50 p-6">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Users className="h-5 w-5 mr-2" />
             Online Users ({onlineUsers.length})
           </h3>
           <div className="space-y-3 max-h-40 overflow-y-auto">
             {onlineUsers.map((user) => (
-              <div key={user.uid} className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
+              <div key={user.uid} className="flex items-center space-x-3 bg-slate-700/50 rounded-lg p-3">
                 <div className={`w-8 h-8 rounded-full ${getUserTypeColor(user.userType)} flex items-center justify-center shadow-lg`}>
                   {getUserTypeIcon(user.userType) || (
                     <span className="text-xs font-medium">
@@ -849,18 +849,18 @@ const ChatRoom: React.FC = () => {
             <div className="fixed inset-0 transition-opacity" aria-hidden="true">
               <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
             </div>
-            <div className="inline-block align-bottom bg-white/10 backdrop-blur-md rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-white/20">
+            <div className="inline-block align-bottom bg-slate-800/50 backdrop-blur-md rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-slate-700/50">
               <div className="px-6 py-6">
                 <div className="sm:flex sm:items-start">
-                  <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-orange-500/20 sm:mx-0 sm:h-10 sm:w-10">
-                    <AlertCircle className="h-6 w-6 text-orange-400" />
+                  <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-emerald-500/20 sm:mx-0 sm:h-10 sm:w-10">
+                    <AlertCircle className="h-6 w-6 text-emerald-400" />
                   </div>
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <h3 className="text-lg leading-6 font-medium text-white">
                       Guest Message Limit Reached
                     </h3>
                     <div className="mt-2">
-                      <p className="text-sm text-blue-200">
+                      <p className="text-sm text-slate-400">
                         You've reached the 5-message limit for guest users. Sign up for a free account to continue chatting with unlimited messages and access all features.
                       </p>
                     </div>
@@ -871,14 +871,14 @@ const ChatRoom: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => navigate('/')}
-                  className="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-base font-medium text-white hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm transition-all duration-200"
+                  className="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-6 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-base font-medium text-white hover:from-emerald-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 sm:ml-3 sm:w-auto sm:text-sm transition-all duration-200"
                 >
                   Sign Up Now
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowGuestLimitModal(false)}
-                  className="mt-3 w-full inline-flex justify-center rounded-xl border border-white/20 shadow-sm px-6 py-3 bg-white/10 text-base font-medium text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition-all duration-200"
+                  className="mt-3 w-full inline-flex justify-center rounded-xl border border-slate-600/50 shadow-sm px-6 py-3 bg-slate-700/50 text-base font-medium text-white hover:bg-slate-600/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition-all duration-200"
                 >
                   Cancel
                 </button>
