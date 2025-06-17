@@ -182,12 +182,6 @@ const ConsultantDashboard: React.FC = () => {
     setConversionsInput('');
   };
 
-  // Pie chart data for analytics
-  const pieChartData = [
-    { name: 'Answered', value: stats.questionsAnsweredTotal, color: '#10B981' },
-    { name: 'Unanswered', value: stats.questionsNotAnsweredTotal, color: '#EF4444' }
-  ];
-
   const totalQuestions = stats.questionsAnsweredTotal + stats.questionsNotAnsweredTotal;
   const responseRate = totalQuestions > 0 ? Math.round((stats.questionsAnsweredTotal / totalQuestions) * 100) : 0;
 
